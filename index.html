@@ -23,7 +23,7 @@
             // Initialize the terminal with commands and a custom clear function
             $('.terminal-container').terminal({
                 whoami: function() {
-                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence.");
+                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence, and Network Security.");
                 },
                 more: function() {
                     this.echo("I specialize in Adversary Emulation, Cyber Threat Simulation, and writing Blogs in Medium.");
@@ -32,13 +32,15 @@
                     this.echo("Recent Projects:\n- Network Security Analysis\n- Automated Log4j Vulnerability Exploitation\n- HTML Smuggling Attack - Reverse TCP Payload Bound with Legitimate Chrome.exe");
                 },
                 contact: function() {
-                    this.echo("You can contact me at:");
                     this.echo("Gmail: [[!;;;;mailto:allenjustine.clement@gmail.com]allenjustine.clement@gmail.com]");
+                },
+                socials: function() {
                     this.echo("LinkedIn: [[!;;;;https://www.linkedin.com/in/allenclementj/]https://www.linkedin.com/in/allenclementj/]");
                     this.echo("Medium: [[!;;;;https://medium.com/@allenjustine.clement]https://medium.com/@allenjustine.clement]");
+                    this.echo("GitHub: [[!;;;;https://github.com/AllenJustine]https://github.com/AllenJustine]");
                 },
                 help: function() {
-                    this.echo("Available commands: whoami, more, projects, contact, help, clear");
+                    this.echo("Available commands: whoami, more, projects, contact, socials, help, clear");
                 },
                 clear: function() {
                     // Custom clear function to retain the welcome message
