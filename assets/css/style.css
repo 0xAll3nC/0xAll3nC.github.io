@@ -1,0 +1,18 @@
+body {
+    background-color: #1e1e1e;
+    font-family: monospace;
+    color: white;
+}
+
+.terminal-container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.terminal {
+    --size: 1.3;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Terminal | Allen Clement Justine Clement</title>
+    
+    <!-- jQuery and jQuery Terminal Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="terminal-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('.terminal-container').terminal({
+                whoami: function() {
+                    this.echo("Hi, I am Allen Clement Justine Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence.");
+                },
+                more: function() {
+                    this.echo("I specialize in Adversary Emulation, Cyber Threat Simulation and writing Blogs in Medium.");
+                },
+                projects: function() {
+                    this.echo("Recent Projects:\n- Network Security Analysis\n- Automated Log4j Vulnerability Exploitation\n- HTML Smuggling Attack - Reverse TCP Payload Bound with Legitimate Chrome.exe");
+                },
+                contact: function() {
+                    this.echo("You can contact me at: allenjustine.clement@gmail.com");
+                },
+                help: function() {
+                    this.echo("Available commands: whoami, more, projects, contact, help, clear");
+                },
+                clear: function() {
+                    this.clear();
+                }
+            }, {
+                greetings: 'Welcome to the Interactive Terminal of Your Name\nType "help" to see available commands.',
+                prompt: '>',
+                name: 'interactive_terminal',
+                height: '100%',
+                width: '100%',
+                completion: true
+            });
+        });
+    </script>
+</body>
+</html>
