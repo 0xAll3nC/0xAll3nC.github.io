@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Terminal | Allen Clement Justine Clement</title>
+    <title>Interactive Terminal | Allen Clement</title>
     
     <!-- jQuery and jQuery Terminal Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,27 +18,32 @@
 
     <script>
         $(document).ready(function() {
+            const welcomeMessage = 'Welcome to the Interactive Terminal of Allen Clement\nType "help" to see available commands.\n';
+
+            // Initialize the terminal with commands and a custom clear function
             $('.terminal-container').terminal({
                 whoami: function() {
-                    this.echo("Hi, I am Allen Clement Justine Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence.");
+                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on offensive security and reverse engineering.");
                 },
                 more: function() {
-                    this.echo("I specialize in Adversary Emulation, Cyber Threat Simulation and writing Blogs in Medium.");
+                    this.echo("I specialize in binary exploitation, penetration testing, and writing CTF challenges.");
                 },
                 projects: function() {
-                    this.echo("Recent Projects:\n- Network Security Analysis\n- Automated Log4j Vulnerability Exploitation\n- HTML Smuggling Attack - Reverse TCP Payload Bound with Legitimate Chrome.exe");
+                    this.echo("Recent Projects:\n- Network Security Analysis\n- Automated Malware Detection\n- Web Application Pentesting");
                 },
                 contact: function() {
-                    this.echo("You can contact me at: allenjustine.clement@gmail.com");
+                    this.echo("You can contact me at: your-email@example.com");
                 },
                 help: function() {
                     this.echo("Available commands: whoami, more, projects, contact, help, clear");
                 },
                 clear: function() {
+                    // Custom clear function to retain the welcome message
                     this.clear();
+                    this.echo(welcomeMessage);
                 }
             }, {
-                greetings: 'Welcome to the Interactive Terminal of Your Name\nType "help" to see available commands.',
+                greetings: welcomeMessage, // Set initial welcome message
                 prompt: '>',
                 name: 'interactive_terminal',
                 height: '100%',
