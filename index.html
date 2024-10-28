@@ -18,12 +18,13 @@
 
     <script>
         $(document).ready(function() {
+            // Define the welcome message as a constant to use in multiple places
             const welcomeMessage = 'Welcome to the Interactive Terminal of Allen Clement Justine Clement\nType "help" to see available commands.\n';
 
-            // Initialize the terminal with commands and a custom clear function
+            // Initialize the terminal with commands
             $('.terminal-container').terminal({
                 whoami: function() {
-                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence, and Network Security.");
+                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence.");
                 },
                 more: function() {
                     this.echo("I specialize in Adversary Emulation, Cyber Threat Simulation, and writing Blogs in Medium.");
@@ -34,21 +35,21 @@
                 contact: function() {
                     this.echo("Gmail: [[!;;;;mailto:allenjustine.clement@gmail.com]allenjustine.clement@gmail.com]");
                 },
-                socials: function() {
+                social: function() {
                     this.echo("LinkedIn: [[!;;;;https://www.linkedin.com/in/allenclementj/]https://www.linkedin.com/in/allenclementj/]");
                     this.echo("Medium: [[!;;;;https://medium.com/@allenjustine.clement]https://medium.com/@allenjustine.clement]");
                     this.echo("GitHub: [[!;;;;https://github.com/AllenJustine]https://github.com/AllenJustine]");
                 },
                 help: function() {
-                    this.echo("Available commands: whoami, more, projects, contact, socials, help, clear");
+                    this.echo("Available commands: whoami, more, projects, contact, social, help, clear");
                 },
                 clear: function() {
-                    // Custom clear function to retain the welcome message
+                    // Custom clear function that resets the screen but keeps the greeting message
                     this.clear();
                     this.echo(welcomeMessage);
                 }
             }, {
-                greetings: welcomeMessage, // Set initial welcome message
+                greetings: welcomeMessage, // Set initial greeting message
                 prompt: '>',
                 name: 'interactive_terminal',
                 height: '100%',
