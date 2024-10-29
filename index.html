@@ -48,7 +48,7 @@
                 name: 'interactive_terminal',
                 height: '100%',
                 width: '100%',
-                completion: function(term, string, callback) {
+                completion: function(string, callback) {
                     // Provides command completion for available commands
                     const commands = ['whoami', 'more', 'projects', 'contact', 'socials', 'help', 'clear'];
                     const matches = commands.filter((cmd) => cmd.startsWith(string));
