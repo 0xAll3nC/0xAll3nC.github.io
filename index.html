@@ -23,7 +23,7 @@
             // Initialize the terminal with commands and a custom clear function
             $('.terminal-container').terminal(function(command) {
                 if (command === 'whoami') {
-                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence and Network Security.");
+                    this.echo("Hi, I am Allen Clement, a cybersecurity enthusiast focused on Threat Modelling, Threat Intelligence.");
                 } else if (command === 'more') {
                     this.echo("I specialize in Adversary Emulation, Cyber Threat Simulation, and writing Blogs in Medium.");
                 } else if (command === 'projects') {
@@ -49,8 +49,10 @@
                 height: '100%',
                 width: '100%',
                 completion: function(term, string, callback) {
-                    // Provides command completion
-                    callback(['whoami', 'more', 'projects', 'contact', 'social', 'help', 'clear']);
+                    // Provides command completion for available commands
+                    const commands = ['whoami', 'more', 'projects', 'contact', 'social', 'help', 'clear'];
+                    const matches = commands.filter((cmd) => cmd.startsWith(string));
+                    callback(matches);
                 }
             });
         });
