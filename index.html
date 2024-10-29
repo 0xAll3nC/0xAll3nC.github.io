@@ -30,12 +30,12 @@
                     this.echo("Recent Projects:\n- Network Security Analysis\n- Automated Log4j Vulnerability Exploitation\n- HTML Smuggling Attack - Reverse TCP Payload Bound with Legitimate Chrome.exe");
                 } else if (command === 'contact') {
                     this.echo("Gmail: [[!;;;;mailto:allenjustine.clement@gmail.com]allenjustine.clement@gmail.com]");
-                } else if (command === 'social') {
+                } else if (command === 'socials') {
                     this.echo("LinkedIn: [[!;;;;https://www.linkedin.com/in/allenclementj/]https://www.linkedin.com/in/allenclementj/]");
                     this.echo("Medium: [[!;;;;https://medium.com/@allenjustine.clement]https://medium.com/@allenjustine.clement]");
                     this.echo("GitHub: [[!;;;;https://github.com/AllenJustine]https://github.com/AllenJustine]");
                 } else if (command === 'help') {
-                    this.echo("Available commands: whoami, more, projects, contact, social, help, clear");
+                    this.echo("Available commands: whoami, more, projects, contact, socials, help, clear");
                 } else if (command === 'clear') {
                     this.clear();
                     this.echo(welcomeMessage); // Redisplay welcome message after clear
@@ -50,7 +50,7 @@
                 width: '100%',
                 completion: function(term, string, callback) {
                     // Provides command completion for available commands
-                    const commands = ['whoami', 'more', 'projects', 'contact', 'social', 'help', 'clear'];
+                    const commands = ['whoami', 'more', 'projects', 'contact', 'socials', 'help', 'clear'];
                     const matches = commands.filter((cmd) => cmd.startsWith(string));
                     callback(matches);
                 }
