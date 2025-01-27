@@ -21,83 +21,88 @@
             const welcomeMessage = 'Welcome to Allen Clement\'s Cybersecurity Portfolio\nType "help" to see available commands.\n';
             const commandsList = ['about', 'projects', 'skills', 'certifications', 'contact', 'socials', 'help', 'clear'];
 
-            $('.terminal-container').terminal(function(command) {
-                switch (command) {
-                    case 'about':
-                        this.echo("Hi, I'm Allen Clement, a cybersecurity engineer specializing in:\n" +
-                                  "- Adversary Emulation\n- Penetration Testing\n- Threat Intelligence.\n" +
-                                  "Education:\n" +
-                                  "- Master's in Cybersecurity, George Washington University (2023-2025)\n" +
-                                  "- Bachelor's in Computer Science, Anna University (2019-2023)");
-                        break;
-                    case 'projects':
-                        this.echo("Featured Projects:\n" +
-                                  "1. Threat Intelligence Automation Tool\n" +
-                                  "   - Tech: Python, VirusTotal API\n" +
-                                  "   - Impact: Improved analysis efficiency by 50%\n" +
-                                  "   - [GitHub Link]\n" +
-                                  "\n" +
-                                  "2. HTML Smuggling Attack Simulation\n" +
-                                  "   - Tech: Metasploit, Apache\n" +
-                                  "   - Impact: 30% higher payload delivery success\n" +
-                                  "   - [GitHub Link]\n" +
-                                  "\n" +
-                                  "3. Automating Log4J Exploitation Using Python\n" +
-                                  "   - Tech: Python, Nmap\n" +
-                                  "   - Impact: Streamlined vulnerability identification and exploitation, saving 40% time\n" +
-                                  "   - [GitHub Link]\n" +
-                                  "\n" +
-                                  "4. Network Security Audits - DoS Attacks\n" +
-                                  "   - Tech: Wireshark, Custom Scripts\n" +
-                                  "   - Impact: Enhanced server resilience by 30%, identified critical vulnerabilities\n" +
-                                  "   - [GitHub Link]");
-                        break;
-                    case 'skills':
-                        this.echo("Key Skills:\n" +
-                                  "- Penetration Testing: Metasploit, OWASP, Kali Linux\n" +
-                                  "- Threat Intelligence: VirusTotal, OSINT\n" +
-                                  "- Scripting: Python, Bash\n" +
-                                  "- Frameworks: Wireshark, Nmap, Apache");
-                        break;
-                    case 'certifications':
-                        this.echo("Certifications:\n" +
-                                  "- CompTIA Security+ (2024)\n" +
-                                  "- Google Cybersecurity Professional Certificate (2024)\n" +
-                                  "- View more: [[!;;;;https://www.linkedin.com/in/allenclementj/]LinkedIn]");
-                        break;
-                    case 'contact':
-                        this.echo("Contact Me:\n" +
-                                  "Email: [[!;;;;mailto:allenjustine.clement@gmail.com]allenjustine.clement@gmail.com]\n" +
-                                  "LinkedIn: [[!;;;;https://www.linkedin.com/in/allenclementj/]https://www.linkedin.com/in/allenclementj/]\n" +
-                                  "Medium: [[!;;;;https://medium.com/@allenjustine.clement]https://medium.com/@allenjustine.clement]");
-                        break;
-                    case 'socials':
-                        this.echo("GitHub: [[!;;;;https://github.com/0xAll3nC]https://github.com/0xAll3nC]");
-                        break;
-                    case 'help':
-                        this.echo("Available commands: " + commandsList.join(", "));
-                        break;
-                    case 'clear':
-                        this.clear();
-                        this.echo(welcomeMessage);
-                        break;
-                    default:
-                        if (command) {
-                            this.echo(`Unknown command: ${command}`);
-                        }
-                        break;
-                }
-            }, {
-                greetings: welcomeMessage,
-                prompt: '>',
-                name: 'portfolio_terminal',
-                height: '100%',
-                width: '100%',
-                completion: function(string, callback) {
-                    const matches = commandsList.filter(cmd => cmd.startsWith(string));
-                    callback(matches);
-                }
-            });
+            function initializeTerminal() {
+                $('.terminal-container').terminal(function(command) {
+                    switch (command) {
+                        case 'about':
+                            this.echo("Hi, I'm Allen Clement, a cybersecurity engineer specializing in:\n" +
+                                      "- Adversary Emulation\n- Penetration Testing\n- Threat Intelligence.\n" +
+                                      "Education:\n" +
+                                      "- Master's in Cybersecurity, George Washington University (2023-2025)\n" +
+                                      "- Bachelor's in Computer Science, Anna University (2019-2023)");
+                            break;
+                        case 'projects':
+                            this.echo("Featured Projects:\n" +
+                                      "1. Threat Intelligence Automation Tool\n" +
+                                      "   - Tech: Python, VirusTotal API\n" +
+                                      "   - Impact: Improved analysis efficiency by 50%\n" +
+                                      "   - [[!;;;;https://github.com/0xAll3nC/Threat-Intelligence-and-Reconnaissance-Automation-Tool]GitHub Link]\n" +
+                                      "\n" +
+                                      "2. HTML Smuggling Attack Simulation\n" +
+                                      "   - Tech: Metasploit, Apache\n" +
+                                      "   - Impact: 30% higher payload delivery success\n" +
+                                      "   - [[!;;;;https://github.com/0xAll3nC/HTML-Smuggling-Attack-Metasploit-reverse_tcp-payload-bound-with-Legitimate-ChromeSetup]GitHub Link]\n" +
+                                      "\n" +
+                                      "3. Automating Log4J Exploitation Using Python\n" +
+                                      "   - Tech: Python, Nmap\n" +
+                                      "   - Impact: Streamlined vulnerability identification and exploitation, saving 40% time\n" +
+                                      "   - [[!;;;;https://github.com/0xAll3nC/Automating-Log4j-Exploitation-using-Python]GitHub Link]\n" +
+                                      "\n" +
+                                      "4. Network Security Audits - DoS Attacks\n" +
+                                      "   - Tech: Wireshark, Custom Scripts\n" +
+                                      "   - Impact: Enhanced server resilience by 30%, identified critical vulnerabilities\n" +
+                                      "   - [[!;;;;https://github.com/0xAll3nC/Network-Security-DoS-Attacks]GitHub Link]");
+                            break;
+                        case 'skills':
+                            this.echo("Key Skills:\n" +
+                                      "- Penetration Testing: Metasploit, OWASP, Kali Linux\n" +
+                                      "- Threat Intelligence: VirusTotal, OSINT\n" +
+                                      "- Scripting: Python, Bash\n" +
+                                      "- Frameworks: Wireshark, Nmap, Apache");
+                            break;
+                        case 'certifications':
+                            this.echo("Certifications:\n" +
+                                      "- CompTIA Security+ (2024)\n" +
+                                      "- Google Cybersecurity Professional Certificate (2024)\n" +
+                                      "- View more: [[!;;;;https://www.linkedin.com/in/allenclementj/]LinkedIn]");
+                            break;
+                        case 'contact':
+                            this.echo("Contact Me:\n" +
+                                      "Email: [[!;;;;mailto:allenjustine.clement@gmail.com]allenjustine.clement@gmail.com]\n" +
+                                      "LinkedIn: [[!;;;;https://www.linkedin.com/in/allenclementj/]https://www.linkedin.com/in/allenclementj/]\n" +
+                                      "Medium: [[!;;;;https://medium.com/@allenjustine.clement]https://medium.com/@allenjustine.clement]");
+                            break;
+                        case 'socials':
+                            this.echo("GitHub: [[!;;;;https://github.com/0xAll3nC]https://github.com/0xAll3nC]");
+                            break;
+                        case 'help':
+                            this.echo("Available commands: " + commandsList.join(", "));
+                            break;
+                        case 'clear':
+                            this.destroy();
+                            initializeTerminal();
+                            break;
+                        default:
+                            if (command) {
+                                this.echo(`Unknown command: ${command}`);
+                            }
+                            break;
+                    }
+                }, {
+                    greetings: welcomeMessage,
+                    prompt: '>',
+                    name: 'portfolio_terminal',
+                    height: '100%',
+                    width: '100%',
+                    completion: function(string, callback) {
+                        const matches = commandsList.filter(cmd => cmd.startsWith(string));
+                        callback(matches);
+                    }
+                });
+            }
+
+            // Initialize the terminal for the first time
+            initializeTerminal();
         });
     </script>
 </body>
