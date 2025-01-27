@@ -63,22 +63,22 @@ Welcome to the repository for **Allen Clement's Interactive Portfolio Website**!
 ### 1. **Threat Intelligence Automation Tool**
 - **Tech**: Python, VirusTotal API
 - **Impact**: Improved analysis efficiency by 50%.
-- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)]([https://github.com/your-repo-1](https://github.com/0xAll3nC/Threat-Intelligence-and-Reconnaissance-Automation-Tool))
+- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/0xAll3nC/Threat-Intelligence-and-Reconnaissance-Automation-Tool)
 
 ### 2. **HTML Smuggling Attack Simulation**
 - **Tech**: Metasploit, Apache
 - **Impact**: Achieved a 30% higher payload delivery success rate.
-- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)]([https://github.com/your-repo-2](https://github.com/0xAll3nC/HTML-Smuggling-Attack-Metasploit-reverse_tcp-payload-bound-with-Legitimate-ChromeSetup))
+- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/0xAll3nC/HTML-Smuggling-Attack-Metasploit-reverse_tcp-payload-bound-with-Legitimate-ChromeSetup)
 
 ### 3. **Automating Log4J Exploitation Using Python**
 - **Tech**: Python, Nmap
 - **Impact**: Streamlined vulnerability identification, saving 40% time.
-- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)]([https://github.com/your-repo-3](https://github.com/0xAll3nC/Automating-Log4j-Exploitation-using-Python))
+- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/0xAll3nC/Automating-Log4j-Exploitation-using-Python)
 
 ### 4. **Network Security Audits - DoS Attacks**
 - **Tech**: Wireshark, Custom Scripts
 - **Impact**: Enhanced server resilience by 30%.
-- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)]([https://github.com/your-repo-4](https://github.com/0xAll3nC/Network-Security-DoS-Attacks))
+- [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=flat-square&logo=github)](https://github.com/0xAll3nC/Network-Security-DoS-Attacks)
 
 ---
 
