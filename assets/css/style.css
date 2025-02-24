@@ -2,6 +2,7 @@ body {
     background-color: #1e1e1e;
     font-family: monospace;
     color: white;
+    line-height: 1.6; /* Improved readability */
 }
 
 .terminal-container {
@@ -11,24 +12,37 @@ body {
     box-sizing: border-box;
 }
 
+/* Slightly refine the terminal window */
 .terminal {
     --size: 1.5;
     border-radius: 12px;
+    background: linear-gradient(to bottom, #232323, #1b1b1b); /* Slight gradient for a sleek look */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    padding: 10px;
+    padding: 12px;
 }
 
-/* Highlight Links */
+/* Blue Team Theme - Update Green (#00ff00) to Blue (#00bfff) */
 .terminal a {
-    color: #00ff00;
+    color: #00bfff;  /* Defensive cybersecurity blue */
     text-decoration: underline;
     font-weight: bold;
 }
 
-/* Add Section Titles Styling */
+/* Section Titles */
 .terminal-container .section-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: #00ff00;
+    color: #00bfff; /* Updated to blue */
     margin-bottom: 10px;
+}
+
+/* Improved Command Prompt Text */
+.terminal .cmd {
+    color: #00bfff;  /* Blue prompt for blue team theme */
+    font-weight: bold;
+}
+
+/* Improve Command Output Formatting */
+.terminal .output {
+    color: #e0e0e0; /* Softer white for output text */
 }
